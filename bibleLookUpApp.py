@@ -16,19 +16,15 @@ def prettyPrint(line):
       print(line)
       line = ''
 
-
 def writeToVerses(line):
   with open("verses.txt", "a") as verse:
     verse.write(line)
 
-
 def isBook(line):
   return line.startswith('THE BOOK OF ')
 
-
 def isBookLine(line, book):
   return line.startswith('THE BOOK OF ' + book.upper())
-
 
 def isChapter(line):
   return line.startswith('CHAPTER ') or line.startswith('PSALM ')
@@ -38,10 +34,8 @@ def isChapterLine(line, chapter):
   return line.startswith('CHAPTER ' + chapter) or line.startswith('PSALM ' +
                                                                   chapter)
 
-
 def isVerseLine(line, verse):
   return line.startswith(verse + ' ')
-
 
 #START MAIN
 keepSearching = True
@@ -114,3 +108,4 @@ while (keepSearching):
   #ask if user wants to search again
   if input('Search again? (Y/N): ').lower() != 'y':
     keepSearching = False
+    
